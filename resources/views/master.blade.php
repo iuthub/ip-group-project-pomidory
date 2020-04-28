@@ -9,10 +9,15 @@
     <title>Интернет Магазин: @yield('title')</title>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <script src="../public/js/jquery.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../public/css/starter-template.css" rel="stylesheet">
+    {{-- <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script> --}}
+
+    {{-- <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/starter-template.css" rel="stylesheet"> --}}
+
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/starter-template.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -43,7 +48,7 @@
 
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://internet-shop.tmweb.ru/login">Войти</a></li>
+                    <li><a href="">Войти</a></li>
                 </ul>
             </div>
         </div>
