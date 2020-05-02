@@ -4,10 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card border border-dark">
+                <div class="card-header text-center text-uppercase font-weight-bold border-bottom-0">
+                    {{ __('Register') }}</div>
 
-                <div class="card-body">
+                <div class="card-body ">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -16,7 +17,7 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                    name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    name="name" value="{{ old('name') }}" required autocomplete="off" autofocus>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -32,7 +33,7 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    name="email" value="{{ old('email') }}" required autocomplete="off">
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -71,7 +72,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
                             </div>
