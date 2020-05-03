@@ -23,29 +23,33 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700&display=swap"
+        rel="stylesheet">
+
+
 
     <!-- Styles -->
-
-
-        <!-- Font Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
-    {{-- <link href="{{ asset('css/main.css') }}" rel="stylesheet"> --}}
+    <!-- Bootstrap Css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    {{-- Main css --}}
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
 
 </head>
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Blog') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -56,14 +60,34 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li class="dropdown">
+
+
+
+
+
+                        {{-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-expanded="false">Blog</a>
                             <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{route('admin.category.index')}}">Category</a></li>
-                                <li><a href="#">Documents</a></li>
-                            </ul>
-                        </li>
+                                <li><a href="{{route('admin.category.index')}}">Category</a></li>
+                        <li><a href="#">Documents</a></li>
+                    </ul>
+                    </li> --}}
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('admin.category.index')}}">Category</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="#">Documents</a>
+                        </div>
+                    </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -104,6 +128,9 @@
         </nav>
 
         <main class="py-4">
+
+
+
             @yield('content')
         </main>
     </div>
