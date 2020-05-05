@@ -22,11 +22,11 @@
 
 <label for="">Name</label>
 <input type="text" class="form-control" name="title" placeholder="Category header"
-       value="{{$category['title'] or ""}}" required>
-
+       value="{{$category->title ?? ""}}" required>
+ 
 <label for="">Slug</label>
 <input type="text" class="form-control" name="slug" placeholder="Auto generation"
-       value="{{$category->slug or ""}}" readonly="">
+       value="{{$category->slug ?? ""}}" readonly="">
 
 <label for="">Parent category</label>
 <select class="form-control" name = "parent_id">
