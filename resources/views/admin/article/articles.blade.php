@@ -5,9 +5,9 @@
 <div class="container">
 
     @component('admin.components.breadcrumb')
-    @slot('title') Category list @endslot
+    @slot('title') Article list @endslot
     @slot('parent') Home @endslot
-    @slot('active') Category @endslot
+    @slot('active') News @endslot
     @endcomponent
 
 
@@ -15,8 +15,8 @@
     <div>
 
 
-        <a class="btn btn-primary" href="{{route('admin.category.create')}}" role="button"> <i
-                class="fa fa-plus-square-o mr-2"></i>Create a category</a>
+        <a class="btn btn-primary" href="{{route('admin.article.create')}}" role="button"> <i
+                class="fa fa-plus-square-o mr-2"></i>Create a News</a>
 
     </div>
 
@@ -29,17 +29,17 @@
             <th class="text-right">Action</th>
         </thead>
         <tbody>
-            @forelse ($categories as $category)
+            @forelse ($articles as $article)
             <tr>
-                <td>{{$category->title}}</td>
-                <td>{{$category->published}}</td>
+                <td>{{$article->title}}</td>
+                <td>{{$article->published}}</td>
                 <td class="text-right">
                 <form onsubmit="if(confrim('Do you want to delete?')){return true}else{return false}"
-                 action="{{route('admin.category.destroy'), $category}}" method="POST">
+                 action="{{route('admin.category.destroy'), $article}}" method="POST">
                  <input type="hidden" name="_method" value="DELETE">
                  {{csrf_field()}}
 
-                 <a class="btn btn-default" href="{{route('admin.category.edit', [$category])}}"><i class="fa fa-edit"></i></a>
+                 <a class="btn btn-default" href="{{route('admin.category.edit', [$article])}}"><i class="fa fa-edit"></i></a>
 
                  <button type="submit" class="btn"><i class="fa fa-trash-o"></i></button>
                 </form>

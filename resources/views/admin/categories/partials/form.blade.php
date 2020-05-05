@@ -28,7 +28,7 @@
 <input type="text" class="form-control" name="slug" placeholder="Auto generation"
        value="{{$category->slug ?? ""}}" readonly="">
 
-<label for="">Parent category</label>
+<label for="">Parent category</label>   
 <select class="form-control" name = "parent_id">
     <option value="0">-- Without parent category --</option>
     @include('admin.categories.partials.categories', ['categories' => $categories])

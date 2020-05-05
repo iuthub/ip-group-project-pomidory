@@ -81,10 +81,10 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{route('admin.category.index')}}">Category</a>
-
+                            
                             <div class="dropdown-divider"></div>
 
-                            <a class="dropdown-item" href="#">Documents</a>
+                            <a class="dropdown-item" href="{{route('admin.article.index')}}">Documents</a>
                         </div>
                     </li>
 
