@@ -23,6 +23,11 @@
 </head>
 
 <body>
+
+
+
+
+
     <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">Blog</a>
@@ -49,13 +54,13 @@
                     @else
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Sign in</a>
                     </li>
 
 
                     @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        <a class="nav-link sign__up" href="{{ route('register') }}">Sign up</a>
                     </li>
                     @endif
                     @endauth
