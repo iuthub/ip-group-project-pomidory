@@ -1,42 +1,55 @@
-<label for="">Status</label>
+<label class="m-0" for="">Status</label>
 <select class="form-control" name="published">
-  @if (isset($article->id))
-    <option value="0" @if ($article->published == 0) selected="" @endif>Не опубликовано</option>
-    <option value="1" @if ($article->published == 1) selected="" @endif>Опубликовано</option>
-  @else
-    <option value="0">Не опубликовано</option>
-    <option value="1">Опубликовано</option>
-  @endif
+    @if (isset($article->id))
+    <option value="0" @if ($article->published == 0) selected="" @endif>Not published</option>
+    <option value="1" @if ($article->published == 1) selected="" @endif>Published</option>
+    @else
+    <option value="0">Not published</option>
+    <option value="1">Published</option>
+    @endif
 </select>
+<div class="mt-3">
+    <label class="m-0" for="">Title</label>
+    <input type="text" class="form-control" name="title" placeholder="News title" value="{{$article->title ?? ''}}"
+        required autocomplete="off">
+</div>
 
-<label for="">Заголовок</label>
-<input type="text" class="form-control" name="title" placeholder="Заголовок новости" value="{{$article->title ?? ""}}" required>
+<div class="mt-3">
+    <label class="m-0" for="">Slug (Unique)</label>
+    <input class="form-control" type="text" name="slug" placeholder="Automatic generation"
+        value="{{$article->slug ?? ''}}" readonly="">
 
-<label for="">Slug (Уникальное значение)</label>
-<input class="form-control" type="text" name="slug" placeholder="Автоматическая генерация" value="{{$article->slug ?? ""}}" readonly="">
-
-<label for="">Родительская категория</label>
-<select class="form-control" name="categories[]" multiple="">
-  @include('admin.article.partials.categories', ['categories' => $categories])
-</select>
-
-<label for="">Краткое описание</label>
-<textarea class="form-control" id="description_short" name="description_short">{{$article->description_short ?? ""}}</textarea>
-
-<label for="">Полное описание</label>
-<textarea class="form-control" id="description" name="description">{{$article->description ?? ""}}</textarea>
-
+</div>
+<div class="mt-3">
+    <label class="m-0" for="">Parent category</label>
+    <select class="form-control" name="categories[]" multiple="">
+        @include('admin.article.partials.categories', ['categories' => $categories])
+    </select>
+</div>
+<div class="mt-3">
+    <label class="m-0" for="">Short description</label>
+    <textarea class="form-control" id="description_short"
+        name="description_short">{{$article->description_short ?? ''}}</textarea>
+</div>
+<div class="mt-3">
+    <label class="m-0" f&&="">Full description</label>
+    <textarea class="form-control" id="description" name="description">{{$article->description ?? ''}}</textarea>
+</div>
 <hr />
-
-<label for="">Мета заголовок</label>
-<input type="text" class="form-control" name="meta_title" placeholder="Мета заголовок" value="{{$article->meta_title ?? ""}}">
-
-<label for="">Мета описание</label>
-<input type="text" class="form-control" name="meta_description" placeholder="Мета описание" value="{{$article->meta_description ?? ""}}">
-
-<label for="">Ключевые слова</label>
-<input type="text" class="form-control" name="meta_keyword" placeholder="Ключевые слова, через запятую" value="{{$article->meta_keyword ?? ""}}">
-
+<div class="">
+    <label class="m-0" for="">Meta title</label>
+    <input type="text" class="form-control" name="meta_title" placeholder="Meta titleSSs"
+        value="{{$article->meta_title ?? ''}}">
+</div>
+<div class="mt-3">
+    <label class="m-0" for="">Meta description</label>
+    <input type="text" class="form-control" name="meta_description" placeholder="Meta description"
+        value="{{$article->meta_description ?? ''}}">
+</div>
+<div class="mt-3">
+    <label class="m-0" for="">Keywords</label>
+    <input type="text" class="form-control" name="meta_keyword" placeholder="Keywords, comma separated"
+        value="{{$article->meta_keyword ?? ''}}">
+</div>
 <hr />
-
-<input class="btn btn-primary" type="submit" value="Сохранить">
+<input class="btn btn-success" type="submit" value="Save">

@@ -70,33 +70,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.index') }}">
+                                Status Bar
+                            </a>
+                        </li>
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Blog
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('admin.category.index')}}">Category</a>
 
+                                <div class="dropdown-divider"></div>
 
-
-
-                        {{-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-expanded="false">Blog</a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{route('admin.category.index')}}">Category</a></li>
-                        <li><a href="#">Documents</a></li>
-                    </ul>
-                    </li> --}}
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('admin.category.index')}}">Category</a>
-                            
-                            <div class="dropdown-divider"></div>
-
-                            <a class="dropdown-item" href="{{route('admin.article.index')}}">Documents</a>
-                        </div>
-                    </li>
+                                <a class="dropdown-item" href="{{route('admin.article.index')}}">Materials</a>
+                            </div>
+                        </li>
 
                     </ul>
 

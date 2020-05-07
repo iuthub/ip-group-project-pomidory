@@ -12,6 +12,8 @@
         {{csrf_field()}}
         {{--Form inclusion--}}
         @include('admin.categories.partials.form')
+
+        {{-- <input type="hidden " name="created_by" value="{{Auth::id()}}"> --}}
     </form>
 
 </div>

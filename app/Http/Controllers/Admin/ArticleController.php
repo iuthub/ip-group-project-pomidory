@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,8 @@ class ArticleController extends Controller
     public function index()
     {
         return view('admin.article.index', [
-            'articles' => Article::orderBy('created_at', 'desc')->paginate(10)
-          ]);
+          'articles' => Article::orderBy('created_at', 'desc')->paginate(10)
+        ]);
     }
 
     /**
@@ -87,6 +88,9 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
+        $article->update($request->except('slug'));
+
+        // Categories
         $article->categories()->detach();
         if($request->input('categories')) :
           $article->categories()->attach($request->input('categories'));
