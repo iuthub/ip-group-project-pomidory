@@ -35,7 +35,7 @@
                 <td>{{$category->published}}</td>
                 <td class="text-right">
                 <form onsubmit="if(confrim('Do you want to delete?')){return true}else{return false}"
-                 action="{{route('admin.category.destroy'), $category}}" method="POST">
+                 action="{{route('admin.category.destroy', [$category])}}" method="POST">
                  <input type="hidden" name="_method" value="DELETE">
                  {{csrf_field()}}
 
