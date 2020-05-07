@@ -37,6 +37,9 @@
 
 <body>
     <div id="app">
+        <div>
+            @include('layouts.header')
+        </div>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
