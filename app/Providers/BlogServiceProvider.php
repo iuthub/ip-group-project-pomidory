@@ -12,9 +12,9 @@ class BlogServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function boot()
     {
-        //
+      $this->topMenu();
     }
 
     /**
@@ -22,9 +22,9 @@ class BlogServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function register()
     {
-        $this->topMenu();
+        
     }
 
     public function topMenu() {

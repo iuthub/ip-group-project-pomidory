@@ -31,6 +31,16 @@
     <textarea class="form-control" id="description_short"
         name="description_short">{{$article->description_short ?? ''}}</textarea>
 </div>
+<div class="col-md-3">
+
+    <input type="file" name="image" class="form-control">
+
+</div>
+<div class="col-md-3">
+
+    <button type="submit" class="btn btn-success">Upload</button>
+
+</div>
 <div class="mt-3">
     <label class="m-0" f&&="">Full description</label>
     <textarea class="form-control" id="description" name="description">{{$article->description ?? ''}}</textarea>
@@ -38,7 +48,7 @@
 <hr />
 <div class="">
     <label class="m-0" for="">Meta title</label>
-    <input type="text" class="form-control" name="meta_title" placeholder="Meta titleSSs"
+    <input type="text" class="form-control" name="meta_title" placeholder="Meta title"
         value="{{$article->meta_title ?? ''}}">
 </div>
 <div class="mt-3">
