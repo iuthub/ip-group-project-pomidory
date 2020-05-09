@@ -19,34 +19,34 @@
         @include('admin.article.partials.form')
 
 
-        <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
+        {{-- <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
 
-            @csrf
+        @csrf
 
-            <div class="row">
-
-
-
-                <div class="col-md-6">
-
-                    <input type="file" name="image" class="form-control">
-
-                </div>
+        <div class="row">
 
 
 
-                <div class="col-md-6">
+            <div class="col-md-6">
 
-                    <button type="submit" class="btn btn-success">Upload</button>
-
-                </div>
-
-
+                <input type="file" name="image" class="form-control">
 
             </div>
 
-        </form>
-        <input type="hidden" name="created_by" value="{{Auth::id()}}">
+
+
+            <div class="col-md-6">
+
+                <button type="submit" class="btn btn-success">Upload</button>
+
+            </div>
+
+
+
+        </div>
+
+    </form> --}}
+    <input type="hidden" name="created_by" value="{{Auth::id()}}">
     </form>
 </div>
 

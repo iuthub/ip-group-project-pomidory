@@ -33,3 +33,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Comments
+Route::post('comments/{post_id}',['users'=>'CommentsConroller@store','as'=>'comments.srote']);

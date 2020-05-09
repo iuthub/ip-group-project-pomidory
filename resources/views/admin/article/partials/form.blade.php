@@ -31,7 +31,7 @@
     <textarea class="form-control" id="description_short"
         name="description_short">{{$article->description_short ?? ''}}</textarea>
 </div>
-<div class="col-md-3">
+{{-- <div class="col-md-3">
 
     <input type="file" name="image" class="form-control">
 
@@ -40,7 +40,7 @@
 
     <button type="submit" class="btn btn-success">Upload</button>
 
-</div>
+</div> --}}
 <div class="mt-3">
     <label class="m-0" f&&="">Full description</label>
     <textarea class="form-control" id="description" name="description">{{$article->description ?? ''}}</textarea>
