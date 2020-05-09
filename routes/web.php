@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('image-upload', 'ImageUploadController@imageUpload')->name('image.upload');
 
-Route::post('image-upload', 'ImageUploadController@imageUploadPost')->name('image.upload.post');
 
 
 Route::get('/blog/category/{slug?}', 'BlogController@category')->name('category');

@@ -43,6 +43,12 @@
                 @endif
 
                 @else
+                <li class="nav-item mr-4">
+                    <a href="{{ route('home') }}" class="nav-link">
+                        Your profile
+                    </a>
+                </li>
+
                 <li class="nav-item dropdown d-flex align-items-center">
                     <svg fill="#fff" class="bi bi-box-arrow-left" width="1em" height="1em" viewBox="0 0 16 16"
                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
