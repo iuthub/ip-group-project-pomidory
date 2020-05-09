@@ -96,8 +96,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{route('admin.user_management.user.index')}}">Users</a>
 
-                            <div class="dropdown-divider"></div>
-
                         </div>
                     </li>
 
