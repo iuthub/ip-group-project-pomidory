@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcb4b050-66ca-48b5-b36b-bf502aef08cc" name="Default Changelist" comment="[ADDED] UserController.php&#10;[ADDED] dropdown to app_admin.blade.php for users management">
+    <list default="true" id="fcb4b050-66ca-48b5-b36b-bf502aef08cc" name="Default Changelist" comment="[DELETED] unnecessary dropdown divider">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_management/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_management/users/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_management/users/partials/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserManagement/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserManagement/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,13 +158,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/user_management/users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IUT\openserver\OSPanel\domains\ip-group-project-pomidory\resources\views\admin\user_management\users" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -183,7 +192,7 @@
       <workItem from="1588443889261" duration="306000" />
       <workItem from="1588575947818" duration="3126000" />
       <workItem from="1588584988368" duration="16389000" />
-      <workItem from="1589018601537" duration="7762000" />
+      <workItem from="1589018601537" duration="15809000" />
     </task>
     <task id="LOCAL-00001" summary="[ADDED] UserController.php&#10;[ADDED] dropdown to app_admin.blade.php for users management">
       <created>1589025919861</created>
@@ -192,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589025919862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[DELETED] unnecessary dropdown divider">
+      <created>1589031175612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589031175612</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,17 +238,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[ADDED] UserController.php&#10;[ADDED] dropdown to app_admin.blade.php for users management" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADDED] UserController.php&#10;[ADDED] dropdown to app_admin.blade.php for users management" />
+    <MESSAGE value="[DELETED] unnecessary dropdown divider" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DELETED] unnecessary dropdown divider" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589049544864">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1589049544864" />
     <state x="604" y="336" key="NewPhpFileDialog" timestamp="1588576280320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1588576280320" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1589025926302">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1589031177805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589025926302" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589031177805" />
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589019567727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -241,9 +262,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1588444102660" />
-    <state x="244" y="409" width="672" height="678" key="search.everywhere.popup" timestamp="1589025667323">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="244" y="429" width="672" height="711" key="search.everywhere.popup" timestamp="1589049242928">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="244" y="409" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589025667323" />
+    <state x="244" y="429" width="672" height="711" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1589049242928" />
   </component>
 </project>
