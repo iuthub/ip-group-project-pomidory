@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 
 
 
@@ -26,8 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $articles = Article::all();
-		// return $articles;
-        return view('/home');
+        $articles = Article::all();
+        return $articles;
+        $categories = Category::all();
+        return $categories;
+        
+        return redirect()->route('/');
     }
 }

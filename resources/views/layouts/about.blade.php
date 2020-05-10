@@ -15,7 +15,7 @@
                     others using 🍅Pomidory.</p>
                 <hr class="my-4">
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">View posts</a>
+                    <a class="btn btn-primary btn-lg" href="{{ url('/') }}" role="button">View posts</a>
                 </p>
             </div>
         </div>

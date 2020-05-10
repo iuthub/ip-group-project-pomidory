@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Article;
+use App\Category;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,12 +31,16 @@ Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], 
 });
 
 Route::get('/', function () {
-    return view('blog.home');
+    $articles = Article::all();
+    $categories = Category::all();
+
+		// return $articles;
+    return view('home',['articles'=>$articles,'categories'=>$categories]);
 });
 
-// Route::get('/profile', function () {
-//     return view('layouts/profile');
-// });
+Route::get('/profile', function () {
+    return view('/profile');
+});
 
 
 
