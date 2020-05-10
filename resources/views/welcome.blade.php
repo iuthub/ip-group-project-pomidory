@@ -23,12 +23,7 @@
 </head>
 
 <body>
-
-
-
-
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    {{-- <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -49,41 +44,41 @@
                                 clip-rule="evenodd" />
                         </svg>
                         <a class="nav-link" href="{{ url('/home') }}">Profile</a>
-                    </li>
+    </li>
 
-                    @else
+    @else
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Sign in</a>
-                    </li>
-
-
-                    @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link sign__up" href="{{ route('register') }}">Sign up</a>
-                    </li>
-                    @endif
-                    @endauth
-
-                </ul>
-
-                @endif
-            </div>
-        </div>
-    </nav>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('login') }}">Sign in</a>
+    </li>
 
 
+    @if (Route::has('register'))
+    <li class="nav-item">
+        <a class="nav-link sign__up" href="{{ route('register') }}">Sign up</a>
+    </li>
+    @endif
+    @endauth
 
+    </ul>
 
+    @endif
+    </div>
+    </div>
+    </nav> --}}
     {{-- <div class="flex-center position-ref full-height">
 
-     
     
     </div> --}}
 
-    <div class="content">
-        <h1 class="text-center mt-5">Welcome Page</h1>
-    </div>
+    {{-- <div class="content">
+
+        @yield('content')
+
+        ауацуац
+    
+        <h1></h1>
+    </div> --}}
     {{-- <div class="card" style="width: 18rem;">
             <img src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                 class="card-img-top" style="max-width: 100%; height:auto;" alt="img">

@@ -5,15 +5,22 @@
   @section('content')
 
   <div class="container">
+
+
       @forelse ($articles as $article)
-      <div class="row">
-          <div class="col-sm-12">
-              <h2><a href="{{route('article', $article->slug)}}">{{$article->title}}</a></h2>
-              <p>{!!$article->description_short!!}</p>
+      <div class="card">
+          <div class="card-body">
+              <h2 class="card-title mb-3">{{$article->title}}</h2>
+              <p class="mb-3 card-text card-subtitle text-muted text-truncate">{!!$article->description_short!!}</p>
+              <a href="{{route('article', $article->slug)}}" class="btn btn-primary">Read more</a>
           </div>
       </div>
       @empty
-      <h2 class="text-center">No posts</h2>
+
+
+      <div class="alert alert-warning" role="alert">
+          No posts
+      </div>
       @endforelse
 
       {{$articles->links()}}

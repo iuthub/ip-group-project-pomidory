@@ -12,40 +12,64 @@
         <div class="col-sm-12">
             <h1>{{  $article->title }}</h1>
             <p>{!! $article->description !!} </p>
+
         </div>
     </div>
 
+    <div>
+        @guest
 
-    <div class="row">
-
+        @else
         @foreach($article->comments as $comment)
-        <div class="comment">
-            <div class="author-info">
-                <div class="comment-content">
-                    {{ $comment->comment }}
-                </div>
+        <div class="card my-2">
 
+            <div class="card-header">
+                <p class="p-0 m-0">Id: {{ $comment->id }}</p>
             </div>
-            @endforeach
-        </div>
-
-        <div class="row">
-            <div id="comment-form" class="col-md-8 col-md-offset-2" style="margin-top: 50px;">
-                {!! Form::open(['route' => ['comments.store', $article->id], 'method' => 'POST']) !!}
-
-                <div class="row">
-
-                    <div class="col-md-12">
-                        {!! Form::label('comment', "Comment:") !!}
-                        {!! Form::textarea('comment', null, ['class' => 'form-control', 'rows' => '5']) !!}
-
-                        {!! Form::submit('Add Comment', ['class' => 'btn btn-success btn-block', 'style' =>
-                        'margin-top:15px;']) !!}
-                    </div>
-                </div>
-
-                {!! Form::close() !!}
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>{{ $comment->comment }}</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">From user:
+                            {{ Auth::user()->name }}</cite>
+                    </footer>
+                </blockquote>
             </div>
         </div>
+        @endforeach
+    </div>
+
+    @endguest
+
+
+    @guest
+
+
+    <div class="alert alert-danger" role="alert">
+        <a href="{{ route('register') }}">Please login to post comment</a>
+    </div>
+
+
+    @else
+    <div class="row">
+        <div id="comment-form" class="col-md-8 col-md-offset-2" style="margin-top: 50px;">
+            {!! Form::open(['route' => ['comments.store', $article->id], 'method' => 'POST']) !!}
+
+
+
+            <div class="col-12 p-0">
+                {!! Form::label('comment', "Post a comment:") !!}
+                {!! Form::textarea('comment', null, ['class' => 'form-control', 'rows' => '5']) !!}
+
+                {!! Form::submit('Add Comment', ['class' => 'btn btn-success btn-block', 'style' =>
+                'margin-top:15px;']) !!}
+            </div>
+
+
+            {!! Form::close() !!}
+        </div>
+
+        @endguest
+
+
     </div>
     @endsection
