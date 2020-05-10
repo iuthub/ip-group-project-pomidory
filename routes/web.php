@@ -33,6 +33,22 @@ Route::get('/', function () {
     return view('blog.home');
 });
 
+// Route::get('/profile', function () {
+//     return view('layouts/profile');
+// });
+
+
+
+Route::get('/aboutus', function () {
+    return view('layouts/about');
+});
+Route::get('/contacts', function () {
+    return view('layouts/contacts');
+});
+
+// Route::get('/', [
+//     'as' => 'article', 'uses' => 'BlogController@home'
+// ]);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

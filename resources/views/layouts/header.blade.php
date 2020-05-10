@@ -14,6 +14,12 @@
             Home
         </a>
         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/aboutus') }}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/contacts') }}">Contacts</a>
+            </li>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 @include('layouts.top_menu', ['categories' => $categories])
             </div>
@@ -30,12 +36,13 @@
 
 
 
-
                 <!-- Authentication Links -->
                 @guest
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Sign in') }}</a>
                 </li>
+
                 @if (Route::has('register'))
                 <li class=" nav-item ">
                     <a class="nav-link sign__up" href="{{ route('register') }}">{{ __('Sign up') }}</a>

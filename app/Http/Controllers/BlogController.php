@@ -19,8 +19,11 @@ class BlogController extends Controller
     }
 
     public function article($slug) {
+	
     	return view('blog.article', [
     		'article' => Article::where('slug', $slug)->first()
     	]);
-    }
+	}
+
+
 }
