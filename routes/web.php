@@ -1,5 +1,8 @@
 <?php
 
+
+
+// FINAL VERSION
 use Illuminate\Support\Facades\Route;
 use App\Article;
 use App\Category;
