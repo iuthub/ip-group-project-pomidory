@@ -35,4 +35,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Comments
-Route::post('comments/{post_id}',['users'=>'CommentsConroller@store','as'=>'comments.srote']);
+Route::post('comments/{article_id}',['uses'=>'CommentsController@store','as'=>'comments.store']);

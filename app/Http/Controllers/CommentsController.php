@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comment;
+use App\Article;    
+use App\Post;
+use Session;
 
 class CommentsController extends Controller
 {
@@ -32,10 +36,40 @@ class CommentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$article_id)
     {
-        //
-    }
+
+
+
+        // return 'works';
+        $this->validate($request, array(
+            'comment'   =>  'required|min:1|max:100'
+            ));
+        $article= Article::find($article_id);
+
+
+       
+        $comment = new Comment();
+        // $comment->name = $request->name;
+        // $comment->email = $request->email;
+        $comment->comment = $request->comment;
+        // $comment->approved = true;
+        $comment->Article()->associate($article);
+      
+       
+
+
+        $comment->save();
+        // return ('works');
+        Session::flash('success', 'Comment was added');
+
+        // return ('work');
+        return redirect()->route('article', [$article->slug]);
+
+
+
+
+    }       
 
     /**
      * Display the specified resource.
